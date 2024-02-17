@@ -1,0 +1,144 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Dash";
+}
+
+<style>
+    /* Reset some default styles for consistency */
+    body, h1, h2, h3, p, ul, li {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Apply basic styling to the page */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
+
+    header {
+        background-color: green;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+        header h1 {
+            font-size: 36px;
+            text-transform: uppercase;
+        }
+
+    main {
+        padding: 20px;
+    }
+
+    /* Feature Section */
+    .features {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .feature {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 20px;
+        text-align: center;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            font-size: 16px;
+            color: #555;
+        }
+
+    footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: green;
+        color: #fff;
+    }
+
+    /* Customize your dashboard styles here */
+</style>
+
+<div class="w-100 mt-4 d-flex flex-wrap">
+    <div class="card flex-fill mx-2 mb-3" style="width: 16rem; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+        <img src="/uploads/download.jpeg" style="width: 100%; height: 10rem;" class="card-img-top" alt="Supplier Image">
+        <div class="card-body">
+            <h5 class="card-title">Suppliers</h5>
+            <p class="card-text">Add New Suppliers Here</p>
+            <a href="/Suppliers/Create" class="btn btn-primary">Create</a>
+            <a href="/Suppliers/Index" class="btn btn-primary">View Suppliers</a>
+        </div>
+    </div>
+
+    <div class="card flex-fill mx-2 mb-3" style="width: 16rem; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+        <img src="/uploads/images.jpeg" style="width: 100%; height: 10rem;" class="card-img-top" alt="Product Image">
+        <div class="card-body">
+            <h2>Total Number of Products: @ViewBag.numberofProducts</h2>
+            <h5 class="card-title" href="/Products/Index">Products</h5>
+            <p class="card-text">Create New Products</p>
+            <a href="/Products/Create" class="btn btn-primary">Create</a>
+            <a href="/Products/Index" class="btn btn-primary">Products</a>
+        </div>
+    </div>
+
+
+</div>
+
+@* <div class="w-100 mt-4 d-flex flex-wrap">
+
+    <div class="card flex-fill mx-2 mb-3" style="width: 16rem; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+        <div class="card-body">
+            <h5 class="card-title">Number of Products</h5>
+            <p class="card-text" style="font-size: 16px">85</p>
+        </div>
+    </div>
+
+    <div class="card flex-fill mx-2 mb-3" style="width: 16rem; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+        <div class="card-body">
+            <h5 class="card-title">Number of Suppliers</h5>
+            <p class="card-text" style="font-size: 16px">5</p>
+        </div>
+    </div>
+</div> *@
+
+@* Orders and Customers *@
+
+<div class="w-100 mt-4 d-flex flex-wrap">
+    <div class="feature flex-fill mx-2 mb-3 btn" href="/Products/Create">
+        <h2>Order Management</h2>
+        <p>Streamline your order process and monitor order status.</p>
+    </div>
+    <div class="feature flex-fill mx-2 mb-3 btn" href="/Products/Create">
+        <h2>Order Management</h2>
+        <p>Streamline your order process and monitor order status.</p>
+    </div>
+</div>
+
+@* <div class="dashboard-content">
+    <h1>Dashboard</h1>
+
+    <div class="info-box">
+        <h2>Total Items in Stock</h2>
+        <p>@ViewBag.TotalItemsInStock</p>
+    </div>
+
+    <!-- Other dashboard content here... -->
+</div> *@
